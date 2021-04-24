@@ -6,13 +6,15 @@ import json
 
 app = Flask(__name__)
 
+
 def run_mock(host, port):
-    server = threading.Thread(target=app.run, kwargs={'host': host, 'port': port})
+    server = threading.Thread(target=app.run, kwargs={
+                              'host': host, 'port': port})
     server.start()
     return server
 
 
-def shutdown_mock():
+def shutdown_server():
     terminate = request.environ.get('werkzeug.server.shutdown')
     if terminate:
         terminate()
@@ -20,13 +22,14 @@ def shutdown_mock():
 
 @app.route('/shutdown', methods=['POST'])
 def shutdown():
-    shutdown_mock()
+    shutdown_server()
     return 'Shutting down...'
 
 
 @app.route('/get/interns', methods=['GET'])
-def hello_world():
+def get_interns():
     return json.dumps(parse_interns())
+
 
 @app.route('/update/table', methods=['POST'])
 def update():
@@ -36,6 +39,7 @@ def update():
     except Exception as e:
         print(e)
         return {"status": "bad"}, 400
+
 
 if __name__ == '__main__':
     run_mock(host='0.0.0.0', port=5000)

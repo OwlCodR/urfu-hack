@@ -1,5 +1,6 @@
 from lxml.html import fromstring
 import requests
+from urllib.parse import urljoin
 
 BASE_URL = 'https://www.naumen.ru'
 
@@ -9,7 +10,7 @@ class UnsupportedStatusCodeException(Exception):
 
 
 def parse_interns():
-    url = BASE_URL + '/career/trainee/'
+    url = urljoin(BASE_URL, '/career/trainee/')
 
     page = requests.get(url=url)
     if page.status_code != 200:
@@ -24,16 +25,19 @@ def parse_interns():
 
         interns = []
         for intern in careers:
-            interns.append(
-                (intern.text_content(), BASE_URL + intern.get('href')))
+            about_url = urljoin(BASE_URL, intern.get('href'))
+
+            about_page = requests.get(about_url)
+            about_root = fromstring(about_page.text)
+
+            test_url = urljoin(BASE_URL, about_root.cssselect(
+                '#steps > div > div > a.btn.btn--default.btn--')[0].get('href'))
+
+            interns.append((intern.text_content(), about_url, test_url))
 
         result[city.text_content()[:len(city.text_content())-1]] = {
             'count': len(interns),
-            'interns': interns
+            'interns': interns,
         }
 
     return result
-
-
-if __name__ == '__main__':
-    print(parse_interns())
