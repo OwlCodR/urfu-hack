@@ -29,9 +29,9 @@
         "https://www.naumen.ru/career/trainee/krasnodar/java_sd/"
       ]
     ]
-  },
-  // Другие города ...
-  }
+    },
+"Другие города..."
+}
 ```
 - **server**/update/table - **[POST]** отправка запроса об обновлении Google Таблицы
 
