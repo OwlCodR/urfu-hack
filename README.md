@@ -8,6 +8,8 @@
 - Google Forms API
 - Golang Telegram API
 - Python Flask (Backend Server)
+- PostgreSQL
+- Redis
 - Docker
 
 ## Как это работает?
