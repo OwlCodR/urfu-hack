@@ -19,7 +19,7 @@
 4. HR видит изменения в таблице.
 
 ## Python Flask Backend
-#### **server** = http://82.146.61.94:5000
+#### **server** = http://*ip*:*port*
 - **server**/get/interns - **[GET]** возвращает json с инфрмацией о стажировках с сайта https://www.naumen.ru/career/trainee/
 ```json
 {
@@ -53,7 +53,7 @@ function myFunction() {
     'method' : 'post',
     'payload' : formData
   };
-  UrlFetchApp.fetch('http://82.146.61.94:5000/update/table', options)
+  UrlFetchApp.fetch('http://*ip*:*port*/update/table', options)
 }
 ```
 
