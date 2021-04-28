@@ -60,3 +60,6 @@ function myFunction() {
 ## Docker
 - Приложение докеризировано и может быть собрано с помощью команды `make build-docker`
 - После сборки приложение вместе с Postgres можно запустить с помощью команды `make run-all`
+
+# :fireworks: RESULTS
+## 1st place
