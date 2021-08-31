@@ -1,5 +1,5 @@
 # Команда Spaces
-## :robot: [CASE "NAUMEN Telegram Бот"](https://drive.google.com/file/d/1EyuxQHTg5V7LGInKZFtsyVkFNT3FBaEz/view)
+## :robot: [Case "NAUMEN Telegram Бот"](https://drive.google.com/file/d/1EyuxQHTg5V7LGInKZFtsyVkFNT3FBaEz/view)
 
 >Наше решение позволяет HR-ам быстро и удобно обрабатывать анкеты будущих стажеров. Вся информация собирается в одном месте, [Гугл-Таблице](https://docs.google.com/spreadsheets/d/1OMjENvfDnax3xV9saBWAbM111KxTskO-CBaNUTYfQTk/edit?usp=sharing), где ее очень просто анализировать. Помимо удобства для HR-ов, [Telegram Бот](https://t.me/spaces_naumen_bot) будет полезен и будущим стажерам, показывая актуальную информацию о доступных стажировках и образовательных программах. Также бот может оповещать стажеров об открывшихся стажировках в их городе и давать возможность заполнить анкету в [Гугл-Форме](https://forms.gle/8RoffafEfF9fW1wPA).
 
